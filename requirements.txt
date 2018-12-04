@@ -1,7 +1,4 @@
 Django==2.0.6
 gunicorn==19.9.0
-pkg-resources==0.0.0
-psycopg2==2.7.6.1
-psycopg2-binary==2.7.6.1
 pytz==2018.5
 whitenoise==3.3.1
