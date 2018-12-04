@@ -1,1 +1,2 @@
-web: gunicorn infotec.wsgi --log-file
+web: gunicorn infotec.wsgi --log-file -
+
