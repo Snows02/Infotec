@@ -1,0 +1,36 @@
+html,
+body {
+  
+}
+
+.jumbo{
+    margin-bottom: 0px;
+}
+
+.container-main{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.navbg{
+    background: #004d40;
+}
+
+.landingb1{
+	margin-bottom: 0px;
+	background: #00897b;
+	color: #030303;
+}
+
+.landingb2{
+	margin-bottom: 0px;
+	background: #4db6ac;
+	color: #030303;
+}
+
+.landingb3{
+	margin-bottom: 0px;
+	background: #b2dfdb;
+	color: #030303;
+}
+
