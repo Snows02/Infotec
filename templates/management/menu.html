@@ -24,7 +24,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link text-white" href="">Diagnostico</a>
+						<a class="nav-link text-white" href="{%url 'diagnostico'%}">Diagnostico</a>
 					</li>
 					<li class="nav-item d-lg-none">
 						<a class="nav-link" href="{%url 'logout'%}">Cerrar sesión</a>
@@ -45,7 +45,7 @@
 				<img src="{% static 'img/gestion.png' %}" class="img-fluid rounded-circle mt-5" alt="">
 			</div>
 			<div class="col text-center">
-				<h4 class="font-italic">Bienvenido a informatec <a class="font-weight-bold">{{user.username}}</a> para empezar tu diagnóstico has click <a href="" class="text-success">aquí.</a> </h4>
+				<h4 class="font-italic">Bienvenido a informatec <a class="font-weight-bold">{{user.username}}</a> para empezar tu diagnóstico has click <a href="{%url 'diagnostico'%}" class="text-success">aquí.</a> </h4>
 			</div>
 		</div>
 	</div>
