@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- Bootstrap Core CSS -->
+	<link href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+	<title>Menu</title>
+	<link rel="icon" href="{% static 'img/icon1.png' %}" type="image/x-icon"> 
+</head>
+
+<body class="d-flex align-items-md-center">
+    <div class="container">
+        <nav class=" navbg navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="{%url 'login'%}">
+                <img src="{% static 'img/icon1.png' %}" class="img-fluid" width="30" height="30" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{%url 'menu'%}">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{%url 'diagnostico'%}">Diagnostico</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="{%url 'logout'%}">Cerrar sesión</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-0 d-none d-lg-block">
+                    <li class="nav-item dropdown">
+                        <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="{%url 'logout'%}">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+                <img src="{% static 'img/gestion.png' %}" class="img-fluid rounded-circle mt-5" alt="">
+            </div>
+            <div class="col text-center">
+                <h4 class="font-italic"><a class="font-weight-bold">{{user.username}}</a> {{enfermedad}}, más sin embargo le aconsejamos consultar a un profesional en la salud</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right">
+                <a href="{%url 'diagnostico'%}" class="font-weight-bold text-success">Regresar</a>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
